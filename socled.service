@@ -3,15 +3,15 @@ Description=uWSGI Socled - Thumbnails generator service
 After=syslog.target
 
 [Service]
-ExecStart=/var/lib/thumbnails/app/venv/bin/uwsgi --ini /var/lib/thumbnails/app/uwsgi.ini
-WorkingDirectory=/var/lib/thumbnails/app
+ExecStart=/var/lib/socled/app/venv/bin/uwsgi --ini /var/lib/socled/app/uwsgi.ini
+WorkingDirectory=/var/lib/socled/app
 Restart=always
 KillSignal=SIGQUIT
 ExecReload=/bin/kill -HUP $MAINPID
 Type=notify
 StandardError=syslog
 NotifyAccess=all
-SyslogIdentifier=thumbnails
+SyslogIdentifier=socled
 
 [Install]
 WantedBy=multi-user.target
