@@ -32,7 +32,7 @@ pip install -r requirements.txt
 deactivate
 ```
 
-#### Configure the application
+#### Configure the application (replace example.com with real hostname)
 
 ```
 cat <<EOF > /var/lib/socled/app/config.py
